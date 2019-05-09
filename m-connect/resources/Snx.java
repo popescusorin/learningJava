@@ -9,7 +9,7 @@ public class Snx {
 
     public void open (String server, String user,String password){
         try {
-            processBuilder = new ProcessBuilder("/bin/bash","-c","/home/sorin/learningJava/metro_connect.sh", server, user, password);
+            processBuilder = new ProcessBuilder("/bin/bash","-c","echo linuxdev | sudo --stdin /home/sorin/learningJava/m-connect/resources/metro_connect.sh", server, user, password);
             Process p = processBuilder.start();
             BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));
             String s = null;
